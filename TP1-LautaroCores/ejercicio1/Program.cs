@@ -97,67 +97,67 @@ namespace ejercicio1
             Fila++;
         }
 
-
     }
-}
 
-class program
-{
-    static void Main(string[] args)
+    class Program
     {
-        Configuracion config = new Configuracion()
+        static void Main(string[] args)
         {
-            Filas = 20,
-            Columnas = 20,
-            Velocidad = 100
-        };
-
-        List<Copo> copos = new List<Copo>();
-        Random random = new Random();
-        Console.CursorVisible = false;
-
-        while (true)
-        {
-            int columna = random.Next(config.Columnas);
-            Copo copo = new Copo(0, columna);
-            copos.Add(copo);
-
-            foreach (var c in copos)
+            Configuracion config = new Configuracion()
             {
-                int FilaSiguiente = c.Fila + 1;
-                bool HayCopoEnFilaSiguiente = copos.Any(cop => cop.Fila == FilaSiguiente && cop.Columna == c.Columna);
+                Filas = 20,
+                Columnas = 20,
+                Velocidad = 100
+            };
 
-                if (!HayCopoEnFilaSiguiente)
+            List<Copo> copos = new List<Copo>();
+            Random random = new Random();
+            Console.CursorVisible = false;
+
+            while (true)
+            {
+                int columna = random.Next(config.Columnas);
+                Copo copo = new Copo(0, columna);
+                copos.Add(copo);
+
+                foreach (var c in copos)
                 {
-                    if (c.Fila < config.Filas - 1)
-                    {
+                    int FilaSiguiente = c.Fila + 1;
+                    bool HayCopoEnFilaSiguiente = copos.Any(cop => cop.Fila == FilaSiguiente && cop.Columna == c.Columna);
 
-                        c.Desplazar();
+                    if (!HayCopoEnFilaSiguiente)
+                    {
+                        if (c.Fila < config.Filas - 1)
+                        {
+                            c.Desplazar();
+                        }
                     }
                 }
-            }
 
-            for (int fila = 0; fila < config.Filas; fila++)
-            {
-                int cantidadEnFila = copos.Count(c => c.Fila == fila);
-
-                if (cantidadEnFila == config.Columnas)
+                for (int fila = 0; fila < config.Filas; fila++)
                 {
-                    foreach (var c in copos)
+                    int cantidadEnFila = copos.Count(c => c.Fila == fila);
+
+                    if (cantidadEnFila == config.Columnas)
                     {
-                        c.Borrar();
+                        foreach (var c in copos.Where(c => c.Fila == fila))
+                        {
+                            c.Borrar();
+                        }
+                        copos.RemoveAll(c => c.Fila == fila);
                     }
-                    copos.RemoveAll(d => d.Fila == fila);
                 }
+
+                foreach (var c in copos)
+                {
+                    c.Mostrar();
+                }
+
+                Thread.Sleep(config.Velocidad);
             }
 
-            foreach (var c in copos)
-            {
-                c.Mostrar();
-            }
-
-            Thread.Sleep(config.Velocidad);
         }
-
     }
+
 }
+
