@@ -5,3 +5,10 @@ C:\Users\lautaro\source\repos\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.c
 C:\Users\lautaro\source\repos\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.csproj.CoreCompileInputs.cache
 C:\Users\lautaro\source\repos\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.exe
 C:\Users\lautaro\source\repos\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.pdb
+C:\Users\lautaro\Downloads\git\TP1-LautaroCores\TP1-LautaroCores\ejercicio1\bin\Debug\ejercicio1.exe.config
+C:\Users\lautaro\Downloads\git\TP1-LautaroCores\TP1-LautaroCores\ejercicio1\bin\Debug\ejercicio1.exe
+C:\Users\lautaro\Downloads\git\TP1-LautaroCores\TP1-LautaroCores\ejercicio1\bin\Debug\ejercicio1.pdb
+C:\Users\lautaro\Downloads\git\TP1-LautaroCores\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.csproj.AssemblyReference.cache
+C:\Users\lautaro\Downloads\git\TP1-LautaroCores\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.csproj.CoreCompileInputs.cache
+C:\Users\lautaro\Downloads\git\TP1-LautaroCores\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.exe
+C:\Users\lautaro\Downloads\git\TP1-LautaroCores\TP1-LautaroCores\ejercicio1\obj\Debug\ejercicio1.pdb

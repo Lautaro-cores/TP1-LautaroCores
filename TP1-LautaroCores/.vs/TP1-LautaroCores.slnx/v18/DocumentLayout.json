@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lautaro\\source\\repos\\TP1-LautaroCores\\",
+  "WorkspaceRootPath": "C:\\Users\\lautaro\\Downloads\\git\\TP1-LautaroCores\\TP1-LautaroCores\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E07EBD7-EDC7-4BEC-B8E9-ADDB18F7B5C2}|ejercicio1\\ejercicio1.csproj|c:\\users\\lautaro\\source\\repos\\tp1-lautarocores\\ejercicio1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1E07EBD7-EDC7-4BEC-B8E9-ADDB18F7B5C2}|ejercicio1\\ejercicio1.csproj|c:\\users\\lautaro\\downloads\\git\\tp1-lautarocores\\tp1-lautarocores\\ejercicio1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E07EBD7-EDC7-4BEC-B8E9-ADDB18F7B5C2}|ejercicio1\\ejercicio1.csproj|solutionrelative:ejercicio1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lautaro\\source\\repos\\TP1-LautaroCores\\ejercicio1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\lautaro\\Downloads\\git\\TP1-LautaroCores\\TP1-LautaroCores\\ejercicio1\\Program.cs",
               "RelativeDocumentMoniker": "ejercicio1\\Program.cs",
-              "ToolTip": "C:\\Users\\lautaro\\source\\repos\\TP1-LautaroCores\\ejercicio1\\Program.cs",
+              "ToolTip": "C:\\Users\\lautaro\\Downloads\\git\\TP1-LautaroCores\\TP1-LautaroCores\\ejercicio1\\Program.cs",
               "RelativeToolTip": "ejercicio1\\Program.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAcwHMAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswD4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-15T21:30:46.106Z",
               "EditorCaption": ""

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ejercicio1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,24 +32,28 @@ Para la aprobación del trabajo es requisito obligatorio contar con todos los it
 
 FECHA DE ENTREGA: 16/07 - 7:45*/
 
-namespace ejercicio1 { 
+namespace ejercicio1
+{
 
     class Configuracion
     {
         private int filas;
         private int columnas;
         private int velocidad;
-       
-        
-        public int Filas {
-        get { return filas; }
+
+
+        public int Filas
+        {
+            get { return filas; }
             set { filas = value; }
         }
-        public int Columnas {
+        public int Columnas
+        {
             get { return columnas; }
             set { columnas = value; }
         }
-        public int Velocidad {
+        public int Velocidad
+        {
             get { return velocidad; }
             set { velocidad = value; }
         }
@@ -56,9 +61,19 @@ namespace ejercicio1 {
 
     internal class Copo
     {
-        private int Fila;
-        private int Columna;
+        private int fila;
+        private int columna;
 
+        public int Fila
+        {
+            get { return fila; }
+            set { fila = value; }
+        }
+        public int Columna
+        {
+            get { return columna; }
+            set { columna = value; }
+        }
 
         public Copo(int Fila, int Columna)
         {
@@ -82,62 +97,67 @@ namespace ejercicio1 {
             Fila++;
         }
 
-        static void Main(string[] args)
+
+    }
+}
+
+class program
+{
+    static void Main(string[] args)
+    {
+        Configuracion config = new Configuracion()
         {
-            Configuracion config = new Configuracion()
+            Filas = 20,
+            Columnas = 20,
+            Velocidad = 100
+        };
+
+        List<Copo> copos = new List<Copo>();
+        Random random = new Random();
+        Console.CursorVisible = false;
+
+        while (true)
+        {
+            int columna = random.Next(config.Columnas);
+            Copo copo = new Copo(0, columna);
+            copos.Add(copo);
+
+            foreach (var c in copos)
             {
-                Filas = 20,
-                Columnas = 20,
-                Velocidad = 100
-            };
+                int FilaSiguiente = c.Fila + 1;
+                bool HayCopoEnFilaSiguiente = copos.Any(cop => cop.Fila == FilaSiguiente && cop.Columna == c.Columna);
 
-            List<Copo> copos = new List<Copo>();
-            Random random = new Random();
-            Console.CursorVisible = false;
-
-            while (true) 
-            {
-                int columna = random.Next(config.Columnas);
-                Copo copo = new Copo(0, columna);
-                copos.Add(copo);
-
-                foreach (var c in copos)
+                if (!HayCopoEnFilaSiguiente)
                 {
-                    int FilaSiguiente = c.Fila + 1;
-                    bool HayCopoEnFilaSiguiente = copos.Any(cop => cop.Fila == FilaSiguiente && cop.Columna == c.Columna);
-
-                    if (!HayCopoEnFilaSiguiente)
-                     {
-                        if (c.Fila < config.Filas - 1)
-                        {
-                          
-                            c.Desplazar();
-                        }
-                     }
-                }
-               
-                for (int fila = 0; fila < config.Filas; fila++)
-                {
-                    int cantidadEnFila = copos.Count(c => c.Fila == fila);
-
-                    if (cantidadEnFila == config.Columnas)
+                    if (c.Fila < config.Filas - 1)
                     {
-                        foreach (var c in copos)
-                        {
-                            c.Borrar();
-                        }
-                        copos.RemoveAll(d => d.Fila == fila);
+
+                        c.Desplazar();
                     }
                 }
-
-                foreach (var c in copos)
-                {
-                    c.Mostrar();
-                }
-
-                Thread.Sleep(config.Velocidad);
             }
-            
+
+            for (int fila = 0; fila < config.Filas; fila++)
+            {
+                int cantidadEnFila = copos.Count(c => c.Fila == fila);
+
+                if (cantidadEnFila == config.Columnas)
+                {
+                    foreach (var c in copos)
+                    {
+                        c.Borrar();
+                    }
+                    copos.RemoveAll(d => d.Fila == fila);
+                }
+            }
+
+            foreach (var c in copos)
+            {
+                c.Mostrar();
+            }
+
+            Thread.Sleep(config.Velocidad);
         }
+
     }
 }
